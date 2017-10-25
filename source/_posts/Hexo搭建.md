@@ -1,7 +1,7 @@
 ---
-title: test
+title: Hexo搭建
 date: 2017-10-24 11:22:07
-tags: test
+tags: hexo
 ---
 
 ### Github博客教程
@@ -9,6 +9,9 @@ http://blog.csdn.net/gdutxiaoxu/article/details/53576018
 
 ### 主题地址链接
 https://litten.github.io/
+
+### hexo配置
+http://blog.csdn.net/xuezhisdc/article/details/53130383
 
 新建文章
 ``` bash
