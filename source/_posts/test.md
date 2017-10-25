@@ -1,0 +1,23 @@
+---
+title: test
+date: 2017-10-24 11:22:07
+tags: test
+---
+
+### Github博客教程
+http://blog.csdn.net/gdutxiaoxu/article/details/53576018
+
+### 主题地址链接
+https://litten.github.io/
+
+新建文章
+``` bash
+hexo new post "article title"
+```
+生成部署
+``` bash
+hexo g   # 生成
+hexo d   # 部署
+// 或直接
+hexo d -g #在部署前先生成
+```
