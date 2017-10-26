@@ -1,26 +1,28 @@
 ---
-title: Hexoæ­å»º
+title: Hexo´î½¨
 date: 2017-10-24 11:22:07
 tags: hexo
 ---
 
-### Githubåšå®¢æ•™ç¨‹
+### ½Ì³Ì
 http://blog.csdn.net/gdutxiaoxu/article/details/53576018
 
-### ä¸»é¢˜åœ°å€é“¾æ¥
-https://litten.github.io/
+### yiliaÖ÷ÌâµØÖ·Á´½Ó
+https://github.com/litten/hexo-theme-yilia.git
 
-### hexoé…ç½®
+### hexoÅäÖÃ
 http://blog.csdn.net/xuezhisdc/article/details/53130383
 
-æ–°å»ºæ–‡ç« 
+ĞÂ½¨ÎÄÕÂ
 ``` bash
 hexo new post "article title"
 ```
-ç”Ÿæˆéƒ¨ç½²
+Éú³É²¿Êğ
 ``` bash
-hexo g   # ç”Ÿæˆ
-hexo d   # éƒ¨ç½²
-// æˆ–ç›´æ¥
-hexo d -g #åœ¨éƒ¨ç½²å‰å…ˆç”Ÿæˆ
+hexo g   # Éú³É
+hexo d   # ²¿Êğ
+# »òÖ±½Ó
+hexo d -g #ÔÚ²¿ÊğÇ°ÏÈÉú³É
 ```
+²¿Êğ¼´½«Éú³ÉÔÚpublicÎÄ¼ş¼ĞÄÚµÄÎÄ¼ş¸´ÖÆµ½deploy.gitÄÚºó£¬×Ô¶¯¸üĞÂµ½git
+×Ô¶¯²¿ÊğĞèÒª°²×°²å¼ş£¬²¢ÅäÖÃ·¢²¼µØÖ·µÈ
