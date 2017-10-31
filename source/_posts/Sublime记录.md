@@ -1,7 +1,7 @@
 ---
 title: Sublime记录
 date: 2017-10-26 16:18:13
-tags: Sublime
+tags: [Sublime,随笔]
 ---
 
 ### 设置记录

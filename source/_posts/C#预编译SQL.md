@@ -1,7 +1,7 @@
 ---
 title: 'C#预编译SQL'
 date: 2017-10-27 14:34:18
-tags:
+tags: [SQL, 随笔]
 ---
 C#中预编译SQL方法如下：
 ```c#
@@ -20,8 +20,7 @@ int result = dbctx.Database.ExecuteSqlCommand(sql,
              );
 ```
 
-搜到的，还没使用过，记录一下
-查询方法：
+查询方法，好像如下：
 ```c#
 var db = new MSSqlDBContext();
 var name = "tom";
