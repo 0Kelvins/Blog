@@ -20,7 +20,7 @@ int result = dbctx.Database.ExecuteSqlCommand(sql,
              );
 ```
 
-查询方法，好像如下：
+查询方法，如下：
 ```c#
 var db = new MSSqlDBContext();
 var name = "tom";
