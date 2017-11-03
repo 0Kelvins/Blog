@@ -78,3 +78,6 @@ Thymeleaf的url，因为模板里好像不能用`&`符号，需要`&amp;`替换�
 ```
 7. 配置启动设置，添加`SpringBoot`启动配置，集成了Tomcat的，不用想`SpringMVC`等等以前的配置Tomcat的配置，`Main class`就是`XxxApplication`，选上`Use classpath of module`和`JRE`，就可以启动了。
 8. 为了开发看起来舒服点，在`Project Structure`的`Modules`中设置一下对应文件目录作用，设置一下`Main class`为Spirng配置文件
+
+### 小结：
+框架用起来越来越简单了，但是框架解决的还是那些问题，只是省去了很多复杂的配置，写东西越来越简便，让我这样的“搬砖工”，写逻辑什么的更专注一点吧，或许有一天AI可以写逻辑了，大概就失业了:)
