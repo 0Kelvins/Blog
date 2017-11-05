@@ -14,15 +14,18 @@ https://github.com/litten/hexo-theme-yilia.git
 http://blog.csdn.net/xuezhisdc/article/details/53130383
 
 新建文章
-``` bash
+```bash
 hexo new post "article title"
 ```
 生成部署
-``` bash
+```bash
 hexo g   # 生成
 hexo d   # 部署
 # 或直接
-hexo d -g #在部署前先生成
+hexo d -g # 在部署前先生成
 ```
-部署即将生成在public文件夹内的文件复制到deploy.git内后，自动更新到git
-自动部署需要安装插件，并配置发布地址等
+
+### 说明
+1. __部署__：将生成在public文件夹内的文件复制到deploy.git内后，自动推送到git，自动部署需要安装插件，并配置发布地址等
+
+2. 新建文章的 __命名__：不能包含``#``符号，Github上面会404，其他的``\/.?``之类的应该也不行``-_``以及数字是可以的
