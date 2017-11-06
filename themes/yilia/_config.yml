@@ -101,8 +101,8 @@ gitment_oauth:
 style:
   # 头像上面的背景颜色
   header: '#4d4d4d'
-  # 右滑板块背景
-  slider: 'linear-gradient(200deg,#a0cfe4,#e8c37e)'
+  # 右滑板块背景 渐变linear-gradient(200deg,#a0cfe4,#e8c37e)
+  slider: '#4d4d4d'
 
 # slider的设置
 slider:
