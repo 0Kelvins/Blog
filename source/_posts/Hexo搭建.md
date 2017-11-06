@@ -26,7 +26,7 @@ hexo d   # 部署
 hexo d -g # 在部署前先生成
 ```
 
-### 说明
+### 记录
 1. __部署__：将生成在public文件夹内的文件复制到deploy.git内后，自动推送到git，自动部署需要安装插件，并配置发布地址等
 
 2. 新建文章的 __命名__：不能包含``#``符号，Github上面会404，其他的``\/.?``之类的应该也不行``-_``以及数字是可以的
@@ -45,4 +45,32 @@ hexo d -g # 在部署前先生成
 skip_render:
  - test.html
  - test/*
+```
+
+
+### [hexo标签插件](https://hexo.io/zh-cn/docs/tag-plugins.html)
+__jsFiddle__
+在文章中嵌入 jsFiddle。
+```
+{% jsfiddle shorttag [tabs] [skin] [width] [height] %}
+```
+__Gist__
+在文章中嵌入 Gist。
+```
+{% gist gist_id [filename] %}
+```
+__iframe__
+在文章中插入 iframe。
+```
+{% iframe url [width] [height] %}
+```
+__Image__
+在文章中插入指定大小的图片。
+```
+{% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
+```
+__Link__
+在文章中插入链接，并自动给外部链接添加 target="_blank" 属性。
+```
+{% link text url [external] [title] %}
 ```
