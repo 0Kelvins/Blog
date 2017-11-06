@@ -7,9 +7,10 @@ tags: hexo
 ### 教程
 http://blog.csdn.net/gdutxiaoxu/article/details/53576018
 
-### 主题地址链接
-[yilia](https://github.com/litten/hexo-theme-yilia.git)
-[NexT](http://theme-next.iissnan.com/getting-started.html)
+### 主题github地址
+__yilia__ `https://github.com/litten/hexo-theme-yilia.git`
+__NexT__ `https://github.com/iissnan/hexo-theme-next.git`
+
 ### hexo配置
 http://blog.csdn.net/xuezhisdc/article/details/53130383
 
