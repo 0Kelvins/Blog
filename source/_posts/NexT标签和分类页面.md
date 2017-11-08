@@ -1,7 +1,10 @@
 ---
 title: NexT标签和分类页面
+tags:
+  - hexo
+  - Next
+abbrlink: 17076
 date: 2017-11-06 22:14:22
-tags: [hexo, Next]
 ---
 
 ## 步骤一
@@ -29,7 +32,7 @@ comments: false
 ---
 ```
 ## 步骤三
-在菜单中添加链接。编辑 主题配置文件 ，添加 tags 到 menu 中，如下:
+在菜单中添加链接。编辑NexT的配置文件 ，添加 tags 到 menu 中，如下:
 ```
 menu:
   home: /

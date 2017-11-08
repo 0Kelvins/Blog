@@ -85,9 +85,9 @@ index_with_subtitle: false
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
   home: / || home
-  #about: /about/ || user
-  #tags: /tags/ || tags
-  #categories: /categories/ || th
+  about: /about/ || user
+  tags: /tags/ || tags
+  categories: /categories/ || th
   archives: /archives/ || archive
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
@@ -353,7 +353,7 @@ han: false
 # Disqus
 disqus:
   enable: false
-  shortname:
+  shortname: 
   count: true
 
 # Hypercomments
@@ -396,15 +396,15 @@ gitment:
   enable: true
   mint: true # RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway
   count: true # Show comments count in post meta area
-  lazy: true # Comments lazy loading with a button
-  cleanly: false # Hide 'Powered by ...' on footer, and more
-  language: # Force language, or auto switch by theme
+  lazy: false # Comments lazy loading with a button
+  cleanly: true # Hide 'Powered by ...' on footer, and more
+  language: zh-Hans # Force language, or auto switch by theme
   github_user: 0Kelvins
-  github_repo: git@github.com:0Kelvins/0Kelvins.github.io.git
+  github_repo: https://github.com/0Kelvins/0Kelvins.github.io.git
   client_id: 9fda90261de3d6876a1c
   client_secret: 8ad5393bf5daef1232f5d4eccdd252b4ba42d055
   proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect
-  redirect_protocol: # Protocol of redirect_uri with force_redirect_protocol when mint enabled
+  redirect_protocol:  # Protocol of redirect_uri with force_redirect_protocol when mint enabled
 
 # Baidu Share
 # Available value:
