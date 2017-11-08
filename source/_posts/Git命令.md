@@ -1,7 +1,10 @@
 ---
 title: Git命令
+tags:
+  - git
+  - 随笔
+abbrlink: b6ef4fe0
 date: 2017-10-24 11:22:07
-tags: [git, 随笔]
 ---
 
 强制更新覆盖本地

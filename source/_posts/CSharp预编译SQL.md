@@ -1,7 +1,10 @@
 ---
 title: 'C#预编译SQL'
+tags:
+  - SQL
+  - 随笔
+abbrlink: 9dae95bf
 date: 2017-10-27 14:34:18
-tags: [SQL, 随笔]
 ---
 C#中预编译SQL方法如下：
 ```c#

@@ -1,7 +1,8 @@
 ---
 title: MySQL安装
-date: 2017-11-2 20:43:13
 tags: MySQL
+abbrlink: 8b39915a
+date: 2017-11-02 20:43:13
 ---
 
 下了个``mysql-5.7.20-winx64``，以为是msi文件在压缩了一下呢。- -||

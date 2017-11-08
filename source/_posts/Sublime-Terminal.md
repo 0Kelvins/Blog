@@ -1,7 +1,10 @@
 ---
 title: Sublime Terminal
+tags:
+  - Sublime
+  - 随笔
+abbrlink: 49a0138a
 date: 2017-10-26 15:50:15
-tags: [Sublime,随笔]
 ---
 
 无论是用Sublime写前端，还是写Markdown，经常要用到终端，每次``Win+R``再cmd也是麻烦

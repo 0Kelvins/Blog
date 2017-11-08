@@ -1,7 +1,11 @@
 ---
 title: SpringBoot搭建体验
+tags:
+  - Java
+  - Web
+  - SpringBoot
+abbrlink: 5998cfba
 date: 2017-11-03 11:50:12
-tags: [Java, Web, SpringBoot]
 ---
 
 虽然现在不在用Java开发，但是决定了解一下Java Web开发在用的比较新的东西

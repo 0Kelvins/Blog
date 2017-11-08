@@ -1,7 +1,8 @@
 ---
 title: Hexo搭建
-date: 2017-10-24 11:22:07
 tags: hexo
+abbrlink: 57ee7c1d
+date: 2017-10-24 11:22:07
 ---
 
 ### 教程

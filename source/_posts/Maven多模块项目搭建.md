@@ -1,7 +1,11 @@
 ---
 title: Maven多模块项目搭建
-date: 2017-11-6 16:58:12
-tags: [Maven, Java, 随笔]
+tags:
+  - Maven
+  - Java
+  - 随笔
+abbrlink: 1ddf75e3
+date: 2017-11-06 16:58:12
 ---
 
 __框架/工具 关键字__
