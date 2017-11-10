@@ -13,3 +13,10 @@ $ git fetch --all #下载最新文件（未覆盖）
 $ git reset --hard origin/master #定向最新下载版本
 $ git pull #更新，已经同步远程最新文件
 ```
+
+删除已纳入版本控制，并后添加到`.gitignore`的文件（注意`.`）
+```bash
+git rm -r --cached .
+git add .
+git commit -m 'update .gitignore'
+```
