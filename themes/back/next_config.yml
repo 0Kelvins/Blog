@@ -400,9 +400,9 @@ gitment:
   cleanly: true # Hide 'Powered by ...' on footer, and more
   language: zh-Hans # Force language, or auto switch by theme
   github_user: 0Kelvins
-  github_repo: https://github.com/0Kelvins/0Kelvins.github.io.git
-  client_id: 9fda90261de3d6876a1c
-  client_secret: 8ad5393bf5daef1232f5d4eccdd252b4ba42d055
+  github_repo: 0Kelvins.github.io
+  client_id: ec7c0871902310161ec2
+  client_secret: 4500a2308027015334666a45346a695163acaeed
   proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect
   redirect_protocol:  # Protocol of redirect_uri with force_redirect_protocol when mint enabled
 

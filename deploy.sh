@@ -1,4 +1,5 @@
-﻿#! /bin/bash 
+﻿#! /bin/bash
+
 echo ******************提交Blog******************
 echo ******************更新本地仓库**************
 git pull origin master
