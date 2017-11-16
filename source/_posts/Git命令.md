@@ -20,3 +20,10 @@ git rm -r --cached .
 git add .
 git commit -m 'update .gitignore'
 ```
+
+修改已`commit`备注
+1. 输入
+```bash
+git commit --amend
+```
+2. 进入最后一次提交的内容（vim编辑器） > `a`进入插入模式 > 修改 > `Esc` > 输入`:wq`，保存退出
