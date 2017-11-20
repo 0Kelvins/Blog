@@ -48,6 +48,7 @@ skip_render:
  - test/*
 ```
 
+4. `_post`文件夹下是可以新建自己的文件夹的
 
 ### [hexo标签插件](https://hexo.io/zh-cn/docs/tag-plugins.html)
 __jsFiddle__

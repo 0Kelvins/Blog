@@ -14,7 +14,7 @@ date: 2017-11-20 16:02:23
 ### 图片
 
 在文章中插入指定大小的图片。
-```js
+```html
 {% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
 
 <!-- 例 -->
@@ -53,7 +53,7 @@ date: 2017-11-20 16:02:23
 {% fi /assets/images/illustration/HallstattAustria.jpg, NexT内建标签fi, NexT内建标签fi %}
 
 ### Bootstrap Callout
-```js
+```html
 {% note class-name %} Content (md partial supported) {% endnote %}
 
 <!-- 例 -->
