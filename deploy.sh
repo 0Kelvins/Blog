@@ -18,7 +18,7 @@ git pull origin master
 echo ******************更新完成******************
 
 echo ******************开始复制******************
-cp -avx ../Blog/public/* .
+cp -avxu ../Blog/public/* .
 echo ******************复制完成******************
 
 cd ../0Kelvins.github.io
