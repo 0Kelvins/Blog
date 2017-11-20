@@ -5,6 +5,6 @@ db.json
 node_modules/
 public/
 .deploy*/
-themes/yilia/*
-themes/next/*
+themes/yilia/
+themes/next/
 *.code-workspace
