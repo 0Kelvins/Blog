@@ -25,5 +25,7 @@ paaccess](https://social.msdn.microsoft.com/Forums/en-us/338f95b6-19a3-48da-a975
 ### 解决方法
 安装**32位**的 `Visual C++ Redistributable Packages for Visual Studio 2013` ，然后重启电脑即可
 
+下载链接：[vcredist_x86](https://download.microsoft.com/download/F/3/5/F3500770-8A08-488E-94B6-17A1E1DD526F/vcredist_x86.exe)
+
 ### 记
 考虑把问题翻译成英文以后查，的确能搜到更多的信息
