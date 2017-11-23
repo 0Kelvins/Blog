@@ -1,13 +1,15 @@
 ---
-title: 【LeetCode】LongestSubstring
+title: 【LeetCode】3. Longest Substring Without Repeating Characters
 comments: true
-categories: LeetCode
-tags: LeetCode
+categories: Algorithm
+tags: 
+    - LeetCode
+    - Algorithm
+    - Java
 abbrlink: ed2c3dd1
 date: 2017-11-21 15:16:10
 ---
 
-## 3. Longest Substring Without Repeating Characters
 ##    字符串内无重复字母的最长子串
 
 题目地址：[Go to LeetCode](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)
