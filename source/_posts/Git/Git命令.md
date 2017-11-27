@@ -18,7 +18,7 @@ $ git pull origin master #更新，已经同步远程最新文件
 ```bash
 git rm -r --cached .
 git add .
-git commit -m 'update .gitignore'
+git commit -m "update .gitignore"
 ```
 
 修改已`commit`备注
