@@ -20,7 +20,7 @@ echo ******************完成**********************
 echo ------------------提交0Kelvins.github.io----
 cd ../0Kelvins.github.io
 
-read -p "是否更新Blog :" updateOp1
+read -p "是否更新github pages :" updateOp1
 if ["$updateOp1" = "y"]
 then
 	echo ******************更新本地仓库**************
