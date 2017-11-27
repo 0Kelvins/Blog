@@ -115,5 +115,5 @@ jsonContent:
     tags: true
 
 # 自动生成sitemap
-sitemap: 
-  path: sitemap.xml
+#sitemap: 
+#  path: sitemap.xml
