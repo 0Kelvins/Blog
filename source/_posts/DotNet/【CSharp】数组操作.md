@@ -1,10 +1,10 @@
 ---
 title: 【CSharp】数组操作
 comments: true
-categories: 'C#'
+categories: CSharp
 tags:
   - 随笔
-  - 'C#'
+  - CSharp
 abbrlink: 43a178cc
 date: 2017-11-27 16:08:37
 ---

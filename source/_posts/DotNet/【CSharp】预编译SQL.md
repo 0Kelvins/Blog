@@ -1,10 +1,10 @@
 ---
 title: '【CSharp】预编译SQL'
-categories: C#
+categories: CSharp
 tags:
   - SQL
   - 随笔
-  - C#
+  - CSharp
 abbrlink: 9dae95bf
 date: 2017-10-27 14:34:18
 ---
