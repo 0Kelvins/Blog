@@ -1,8 +1,10 @@
 ---
-title: 'C#预编译SQL'
+title: '【CSharp】预编译SQL'
+categories: C#
 tags:
   - SQL
   - 随笔
+  - C#
 abbrlink: 9dae95bf
 date: 2017-10-27 14:34:18
 ---
@@ -25,7 +27,7 @@ int result = dbctx.Database.ExecuteSqlCommand(sql,
              );
 ```
 
-查询方法，好像如下：
+查询方法，如下：
 ```c#
 var db = new MSSqlDBContext();
 var name = "tom";
