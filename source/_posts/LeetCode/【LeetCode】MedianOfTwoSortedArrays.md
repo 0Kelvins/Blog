@@ -10,6 +10,9 @@ abbrlink: 2a84b609
 date: 2017-11-23 21:42:13
 ---
 
+## 两数组的中值
+题目地址：[Go to LeetCode](https://leetcode.com/problems/median-of-two-sorted-arrays/description/)
+
 ## 题意
 求两个有序数组中间位置的数，两个数组长度和为偶数个时中间数求平均。
 (哇，这题理解起来还是挺简单的，就是要做到`O(m+n)`有点麻烦了。)
