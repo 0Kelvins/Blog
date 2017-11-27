@@ -11,7 +11,7 @@ date: 2017-10-24 11:22:07
 ```bash
 $ git fetch --all #下载最新文件（未覆盖）
 $ git reset --hard origin/master #定向最新下载版本
-$ git pull #更新，已经同步远程最新文件
+$ git pull origin master #更新，已经同步远程最新文件
 ```
 
 删除已纳入版本控制，并后添加到`.gitignore`的文件（注意`.`）
