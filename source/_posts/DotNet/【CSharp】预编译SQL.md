@@ -1,5 +1,5 @@
 ---
-title: '【CSharp】预编译SQL'
+title: '【C#】预编译SQL'
 categories: CSharp
 tags:
   - SQL

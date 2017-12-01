@@ -50,7 +50,10 @@ date: 2017-11-20 16:02:23
 <!-- 别名 -->
 {% fi /image-url, alt, title %}
 ```
+```
+// 图片太大没有cdn，先注释了=_=
 {% fi /assets/images/illustration/HallstattAustria.jpg, NexT内建标签fi, NexT内建标签fi %}
+```
 
 ### Bootstrap Callout
 ```html
