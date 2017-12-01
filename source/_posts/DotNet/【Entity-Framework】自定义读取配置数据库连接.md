@@ -11,7 +11,7 @@ date: 2017-12-01 15:23:15
 ---
 
 ## 问题
-打包的人反馈`EF DBFirst`的数据库连接配置里面的`&quot`(`"`)，处理不好，沟通起来又不在一个地方，很麻烦，连接配置也的确不太好看，于是搜了下，看到了可以自定义。
+打包的人反馈`EF DBFirst`的数据库连接配置里面的`&quot`(“`"`”)，处理不好，沟通起来又不在一个地方，很麻烦，连接配置也的确不太好看，于是搜了下，看到了可以自定义。
 
 ## 版本
 Entity Framework v6.1.3
@@ -58,4 +58,4 @@ public EFDbContext()
 ## 小结
 其实这主要是构造函数本来的方法就支持直接配置连接字符串
 
-![EF的构造函数](/assets/images/ef_connect_string.png)
+![EF的构造函数](/assets/images/ef_connect_string/ef-construct.png)

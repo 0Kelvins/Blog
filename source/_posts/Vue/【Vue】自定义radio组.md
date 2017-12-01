@@ -14,8 +14,7 @@ date: 2017-12-01 11:47:40
 做出多组`radio`组，来作为选择条件的UI组件，比`select`更方便好看。
 
 ### 问题
-1. 使用了`bootstrap`和`vue`，两者存在冲突，将`bootstrap`的js去掉。
-2. 除了要实现`Vue`的`radio`组件外，因为`bootstrap`的js换了，所以`radio`选中的效果没有了，需要自己用`Vue`来实现绑定点击效果。（不换掉`bootstrap`的js的话Vue的`radio`组件事件绑定就会和冲突，进而没反应）
+1. 使用了`bootstrap`和`vue`，两者存在冲突，将`bootstrap`的js去掉。除了要实现`Vue`的`radio`组件外，因为`bootstrap`的js删除了，所以`radio`选中的效果没有了，需要自己用`Vue`来实现绑定点击效果。（不换掉`bootstrap`的js的话Vue的`radio`组件事件绑定就会和冲突，进而没反应）
 3. 自定义组件的`v-model`，没能实现出想要的效果。待实验。
 
 ## 解决方法
