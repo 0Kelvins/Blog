@@ -26,48 +26,48 @@ SpringBoot + Mybatis + Thymeleaf + Maven
 3. IDEA搭建好基本框架，Maven添加依赖包
 4. 删除`application.properties`，新建`application.yml`、`application-dev.yml`和`application-prod.yml`，分别作为主配置、开发配置、生成配置文件
 `application.yml`:
-```
-    spring:
-      thymeleaf:
-        mode: HTML5
-        encoding: utf-8
-        content-type: text/html
-        cache: false
-      profiles:
-        active: dev # 表示使用application-dev.yml
-      datasource:
-        driver-class-name: com.mysql.jdbc.Driver
-        url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf8
-        username: root
-        password:
-        tomcat:
-          initialSize: 1
-          min-idle: 1
-          max-idle: 20
-          max-wait: 60000
-          timeBetweenEvictionRunsMillis: 60000
-          minEvictableIdleTimeMillis: 30000
-          validationQuery: SELECT 1
-          testWhileIdle: true
-          testOnBorrow: false
-          testOnReturn: false
-    logging:
-      file: logs/demo.log
+```yml
+spring:
+  thymeleaf:
+    mode: HTML5
+    encoding: utf-8
+    content-type: text/html
+    cache: false
+  profiles:
+    active: dev # 表示使用application-dev.yml
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf8
+    username: root
+    password:
+    tomcat:
+      initialSize: 1
+      min-idle: 1
+      max-idle: 20
+      max-wait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 30000
+      validationQuery: SELECT 1
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+logging:
+  file: logs/demo.log
 ```
 `application-dev.yml`:
-```
-    server:
-      port: 8080
+```yml
+server:
+  port: 8080
 ```
 `application-prod.yml`:
-```
-    server:
-      port: 443
-      ssl:
-        key-store: classpath:xxx.jks
-        key-store-password: xxx
-        keyStoreType: JKS
-        keyAlias: xxx
+```yml
+server:
+  port: 443
+  ssl:
+    key-store: classpath:xxx.jks
+    key-store-password: xxx
+    keyStoreType: JKS
+    keyAlias: xxx
 ```
 5. 然后按照我的`SpringBootDemo`仓库来建controller什么的，就好了。
 6. 好吧，前面好多别人写了很多遍的东西，需要的话看我参考的博客就好了。

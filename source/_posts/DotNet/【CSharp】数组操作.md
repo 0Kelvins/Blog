@@ -15,7 +15,7 @@ date: 2017-11-27 16:08:37
 C#里面使用`lambda`表达式很方便，数组的各种操作使用`lambda`就很简洁，但是效率也是自然不如其他的函数了
 
 ## 数组合并(复制)
-```c#
+```cs
 int[] a = new int[] { 1, 2, 3, 4, 5 };
 int[] b = new int[] { 6, 7, 8, 9 };
 int[] c = new int[](a.Length + b.Length);
@@ -52,26 +52,26 @@ Buffer.BlockCopy(a, 0, c, 0, a.Length);
 Buffer.BlockCopy(b, 0, c, a.Length, b);
 ```
 数据量小的情况下，没有太大差别，大量数据时速度比较如下
-```c#
+```cs
 Buffer.BlockCopy > Array.ConstrainedCopy > Array.Copy > Concat
 ```
 
 ## 数组拆分
 除了`lambda`表达式基本，就是使用复制方法，复制子数组到新数组了，如：
-```c#
+```cs
 int[] a = new int[] { 1, 2, 3, 4, 5 };
 int[] b = new int[](3);
 Array.Copy(a, 0, b, 0, 3);
 ```
 
 ### 字符串数组 以指定间隔符 拼接成字符串
-```c#
+```cs
 string[] a = new string[] {"1", "2"};
 string s = string.Join(", ", a); // 1, 2
 ```
 
 ### 字符串 以指定间隔符 分割成字符串数组
-```c#
+```cs
 // 单字符分割
 string s = "a|b|c|";
 string[] a = s.Split('|');	// {"a", "b", "c", ""}

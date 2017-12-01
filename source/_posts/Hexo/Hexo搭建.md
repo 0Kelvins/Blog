@@ -42,7 +42,7 @@ hexo d -g # 在部署前先生成
 * 跳过source目录下`test `文件夹内所有文件包括子文件夹以及子文件夹内的文件：
 ```skip_render: test/**```
 * 跳过多个路径：
-```
+```yml
 skip_render:
  - test.html
  - test/*
@@ -53,26 +53,30 @@ skip_render:
 ### [hexo标签插件](https://hexo.io/zh-cn/docs/tag-plugins.html)
 __jsFiddle__
 在文章中嵌入 jsFiddle。
-```
+```js
 {% jsfiddle shorttag [tabs] [skin] [width] [height] %}
 ```
 __Gist__
 在文章中嵌入 Gist。
-```
+```js
 {% gist gist_id [filename] %}
 ```
 __iframe__
 在文章中插入 iframe。
-```
+```js
 {% iframe url [width] [height] %}
 ```
 __Image__
 在文章中插入指定大小的图片。
-```
+```js
 {% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
 ```
 __Link__
 在文章中插入链接，并自动给外部链接添加 target="_blank" 属性。
-```
+```js
 {% link text url [external] [title] %}
 ```
+
+5. 代码块高亮
+c#代码块标记（`c#`标记无效）：`cs`、`csharp`
+配置文件类型（`*:*`这种）：`yml`

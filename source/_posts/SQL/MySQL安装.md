@@ -9,7 +9,7 @@ date: 2017-11-02 20:43:13
 
 1. 解压到要安装的目录，如：``D:\Program Files\mysql-5.7.20-winx64``
 2. 在bin下新建``my.ini``，如下：
-   ```
+   ```yml
     [mysql]
     # 设置mysql客户端默认字符集
     default-character-set=utf8 
@@ -29,11 +29,11 @@ date: 2017-11-02 20:43:13
    ```
 3. cmd，cd进入``D:\Program Files\mysql-5.7.20-winx64\bin``目录，执行以下命令：
    ```
-   >mysqld install
+   > mysqld install
    Service successfully installed.
-   >mysqld --initialize-insecure --user=mysql
+   > mysqld --initialize-insecure --user=mysql
    
-   >net start mysql
+   > net start mysql
     MySQL 服务正在启动 .
     MySQL 服务已经启动成功。
    ```
