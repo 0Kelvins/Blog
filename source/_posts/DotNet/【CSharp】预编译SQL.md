@@ -29,8 +29,12 @@ int result = dbctx.Database.ExecuteSqlCommand(sql,
 
 查询方法，如下：
 ```cs
-var db = new MSSqlDBContext();
-var name = "tom";
-var list = db.Set<Person>().FromSql($"select * from {nameof(Person)} where {nameof(name)}=@{nameof(name)} ", 
-new SqlParameter(nameof(name), name)).ToList();
+var parameters = new SqlParameter[] {
+    new SqlParameter("name", name),
+    new SqlParameter("age", age)
+};
+
+string sql = $"select * from user where name = @name and age = @age";
+
+var l = db.Database.SqlQuery<User>(sql, parameters).ToList();
 ```
