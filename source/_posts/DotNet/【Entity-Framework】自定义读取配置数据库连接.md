@@ -40,13 +40,14 @@ namespace Utils
 }
 
 ```
-2. 重写一下`edmx`->`*.Context.tt`->`*.Context.cs`的构造函数
+2. 重写一下`edmx`->`*.Context.tt`->`*.Context.cs`的构造函数，可以直接修改`*.Context.tt`文件内的模板，避免下次更新数据库时，代码需要重新修改，搜索`base`即可，修改后面的`"name=xxx"`为你获取自定义连接的方法。
 ```cs
 public EFDbContext()
     : base(Utils.EFConfig.DataBaseConnectionString())
 {
 }
 ```
+
 
 3. 在`Web.config`的`<appSettings>`节点配置，删除不使用了的`<connectionStrings>`节点
 ```xml
