@@ -1,6 +1,9 @@
 ---
 title: MySQL安装
-tags: MySQL
+categories: SQL
+tags: 
+ - MySQL
+ - SQL
 abbrlink: 8b39915a
 date: 2017-11-02 20:43:13
 ---
