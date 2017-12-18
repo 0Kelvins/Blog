@@ -21,7 +21,8 @@ WebApi项目的依赖注入需要使用`System.Web.Http.Dependencies`里的`IDep
 1. 添加引用，使用NuGet安装以下两个包
 * Ninject
 * Ninject.Web.WebApi
-查看引用会附赠`Ninject.Web.Common`，`Ninject.Web.Common.WebHost`，`Ninject.Web.WebApi.WebHost`三个包。
+
+查看引用会发现附赠了 `Ninject.Web.Common`， `Ninject.Web.Common.WebHost`， `Ninject.Web.WebApi.WebHost` 三个包。
 2. 然后修改在App_Start下`NinjectWebCommon`的`RegisterServices()`，在里面后面加上自己的注入bind，如：
 ```cs
 private static void RegisterServices(IKernel kernel)
