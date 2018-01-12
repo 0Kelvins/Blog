@@ -19,7 +19,7 @@ date: 2018-01-11 11:26:16
 **解决方法：** 没有的就用其他表的补上，需要知道`ISNULL()`方法或着使用条件判断语句`case when 条件1 then 结果1 when 条件2 then 结果2 else 结果N end`来判断A表是否没有对应列数据，然后补全B或C表对应列
 
 **实现：**
-```cs
+```sql
 	SELECT temp.[UserID],
 		   CONVERT(DATE, temp.[DateTime]) AS [DateTime],
 		   temp.[AEventNumber],
