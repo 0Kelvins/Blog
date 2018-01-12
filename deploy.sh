@@ -2,12 +2,14 @@
 
 echo ------------------提交Blog------------------
 
-read -p "是否更新Blog :" updateOp1
+read -p "是否更新Blog(y/n) :" updateOp1
 if ["$updateOp1" = "y"]
 then
 	echo ******************更新本地仓库**************
 	git pull origin master
 	echo ******************更新完成******************
+else
+	echo ******************跳过更新******************
 fi
 
 echo ******************添加并提交本地仓库********
@@ -20,12 +22,14 @@ echo ******************完成**********************
 echo ------------------提交0Kelvins.github.io----
 cd ../0Kelvins.github.io
 
-read -p "是否更新github pages :" updateOp1
+read -p "是否更新github pages(y/n) :" updateOp1
 if ["$updateOp1" = "y"]
 then
 	echo ******************更新本地仓库**************
 	git pull origin master
 	echo ******************更新完成******************
+else
+	echo ******************跳过更新******************
 fi
 
 echo ******************开始复制******************
