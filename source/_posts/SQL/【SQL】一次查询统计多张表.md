@@ -43,13 +43,13 @@ date: 2018-01-11 11:26:16
 					b.[DateTime],
 				    b.[Number] AS [BEventNumber]
 		    FROM BEvent AS b) AS be
-			ON ae.[UserID] = be.[UserID]
+			ON ae.[UserID] = be.[UserID] and ae.[DateTime] = be.[DateTime]
 			FULL JOIN
 			(SELECT c.[UserID],
 					c.[DateTime],
 				    c.[Number] AS [BEventNumber]
 		    FROM CEvent AS c) AS ce
-			ON ae.[UserID] = ce.[UserID]
+			ON ae.[UserID] = ce.[UserID] and ae.[DateTime] = ce.[DateTime]
 		) AS temp
 ```
 当A表没有B或C表内的用户编号或者统计时间时，使用B或C的代替
