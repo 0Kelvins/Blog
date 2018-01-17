@@ -1,7 +1,7 @@
 ---
 title: 【Entity Framework】自定义读取配置数据库连接
 comments: true
-categories: CSharp
+categories: DotNet
 tags:
   - CSharp
   - DotNet
