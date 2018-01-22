@@ -27,29 +27,35 @@ date: 2018-01-11 11:26:16
 		   temp.[CEventNumber],
 		   temp.[TotalNumber]
 	FROM (
-			SELECT ISNULL(ae.[UserID], ISNULL(be.[UserID], ce.[UserID])) AS [UserID],
-					ISNULL(ae.[DateTime], ISNULL(be.[DateTime], ce.[DateTime])) AS [DateTime],
+		SELECT  ISNULL(abe.[UserID], ce.[UserID]) AS [UserID],
+				ISNULL(abe.[DateTime], ce.[DateTime]) AS [DateTime],
+				abe.[AEventNumber],
+				abe.[BEventNumber],
+				ce.[CEventNumber],
+				ISNULL(abe.[AEventNumber], 0) + ISNULL(abe.[BEventNumber], 0) + ISNULL(ce.[CEventNumber], 0) as TotalNumber
+		FROM
+			(SELECT ISNULL(ae.[UserID], re.[UserID]) AS [UserID],
+					ISNULL(ae.[DateTime], re.[DateTime]) AS [DateTime],
 					ISNULL([AEventNumber], 0) AS [AEventNumber],
 					ISNULL([BEventNumber], 0) AS [BEventNumber],
-					ISNULL([CEventNumber], 0) AS [CEventNumber],
-					(ISNULL([AEventNumber], 0) + ISNULL([BEventNumber], 0) + ISNULL([CEventNumber], 0)) as TotalNumber
+					ISNULL([AEventNumber], 0) + ISNULL([BEventNumber], 0) as TotalNumber
 			FROM
-			(SELECT a.[UserID],
-					a.[DateTime],
-				    a.[Number] AS [AEventNumber]
-		    FROM AEvent AS a) AS ae
-			FULL JOIN
-			(SELECT b.[UserID],
-					b.[DateTime],
-				    b.[Number] AS [BEventNumber]
-		    FROM BEvent AS b) AS be
-			ON ae.[UserID] = be.[UserID] and ae.[DateTime] = be.[DateTime]
+				(SELECT a.[UserID],
+						a.[DateTime],
+						a.[Number] AS [AEventNumber]
+				FROM AEvent AS a) AS ae
+				FULL JOIN
+				(SELECT b.[UserID],
+						b.[DateTime],
+						b.[Number] AS [BEventNumber]
+				FROM BEvent AS b) AS re
+				ON ae.[UserID] = re.[UserID] and ae.[DateTime] = re.[DateTime]) AS abe
 			FULL JOIN
 			(SELECT c.[UserID],
 					c.[DateTime],
-				    c.[Number] AS [BEventNumber]
-		    FROM CEvent AS c) AS ce
-			ON ae.[UserID] = ce.[UserID] and ae.[DateTime] = ce.[DateTime]
+				    c.[Number] AS [CEventNumber]
+				FROM CEvent AS c) AS te
+			ON abe.[UserID] = ce.[UserID] and abe.[DateTime] = ce.[DateTime]
 		) AS temp
 ```
 当A表没有B或C表内的用户编号或者统计时间时，使用B或C的代替
