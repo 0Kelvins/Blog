@@ -48,3 +48,31 @@ var l = from p in Person
         select p;
 ```
 
+5. 条件中`in`与`not in`
+参考：[LINQ - 在Where條件式中使用in與not in —— ADOU-V，博客园](https://www.cnblogs.com/a-dou/p/5916895.html)
+
+`in`的SQL实现：
+```sql
+Select ProductID, ProductName, CategoryID From dbo.Products  
+Where CategoryID in (1, 2)
+```
+
+`in`的Linq实现：
+```cs
+var l = from p in dbctx.Products 
+        where (new int?[] {1, 2}).Contains(p.CategoryID) 
+        select p;
+```
+
+`not in`的SQL实现：
+```sql
+Select ProductID, ProductName, CategoryID From dbo.Products  
+Where CategoryID not in (1, 2)
+```
+
+`not in`的Linq实现：
+```cs
+var l = from p in dbctx.Products 
+        where !(new int?[] {1, 2}).Contains(p.CategoryID) 
+        select p;
+```
