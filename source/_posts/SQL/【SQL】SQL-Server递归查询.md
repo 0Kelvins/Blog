@@ -12,7 +12,7 @@ date: 2018-01-30 19:52:08
 有一张国内区域表，要查询一个区域及其子区域的区域编码
 
 效果：
-![区域表查询效果](/assets/images/sql_clause_region/sql_clause_region.jpg)
+![区域表查询效果](/assets/images/sql_recursive_query_region/sql_recursive_query_region.png)
 
 表结构：
 ```sql
