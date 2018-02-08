@@ -474,7 +474,7 @@ needmoreshare2:
 
 # Bing Webmaster tools verification setting
 # See: https://www.bing.com/webmaster/
-#bing_site_verification:
+bing_site_verification: <meta name="msvalidate.01" content="3C88BE5E54CC239AB7E1C612DAA67DE6" />
 
 # Yandex Webmaster tools verification setting
 # See: https://webmaster.yandex.ru/
