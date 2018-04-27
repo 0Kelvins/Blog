@@ -80,7 +80,9 @@ pagination_dir: page
 search:
   path: search.xml
   # 如只想索引文章，可设置为post
-  field: all 
+  field: all
+  format: html
+  limit: 10000
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
