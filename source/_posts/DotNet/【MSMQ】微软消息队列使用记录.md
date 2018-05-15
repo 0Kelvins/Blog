@@ -1,13 +1,14 @@
 ---
 title: 【MSMQ】微软消息队列使用记录
 comments: true
-date: 2018-05-15 14:48:39
 categories: DotNet
 tags:
-    - middleware
-    - Message Queue
-    - CSharp
-    - DotNet
+  - middleware
+  - Message Queue
+  - CSharp
+  - DotNet
+abbrlink: a978f3d9
+date: 2018-05-15 14:48:39
 ---
 ### 简介
 
