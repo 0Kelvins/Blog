@@ -8,14 +8,15 @@ abbrlink: 8b39915a
 date: 2017-11-02 20:43:13
 ---
 
-下了个``mysql-5.7.20-winx64``，以为是msi文件在压缩了一下呢。- -||
+下了个``mysql-5.7.20-winx64``，以为是msi文件压缩了一下呢。- -||
 
 1. 解压到要安装的目录，如：``D:\Program Files\mysql-5.7.20-winx64``
-2. 在bin下新建``my.ini``，如下：
+2. 在根目录下新建``my.ini``，如下：
    ```yml
     [mysql]
     # 设置mysql客户端默认字符集
-    default-character-set=utf8 
+    default-character-set=utf8
+
     [mysqld]
     #设置3306端口
     port = 3306 
