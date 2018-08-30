@@ -20,25 +20,27 @@ SQL Server 2008 R2
 
 ### 1. 建库、文件组及文件
 
+建库前要求先建好目录，然后修改下面脚本建立自己的库（注意下面脚本反斜杠替换为单个）
+
 ```sql
 USE master
 GO
 
 DECLARE @DbName VARCHAR(max), @Path NVARCHAR(1000), @InitSize VARCHAR(50), @FileGrowth VARCHAR(50)
-SELECT @Path = 'D:\PulicDataBase\',	--指定根路径
-	   @InitSize = '5MB', @FileGrowth='10%'
+SELECT @Path = 'D:\\PulicDataBase\\',	-- 指定根路径(\\, hight light fix, 请自行替换为单反斜杠，下同)
+	   @InitSize = '5MB', @FileGrowth = '10%';
 
---指定数据库名称，多个用逗号隔开
-SELECT @DbName	= 'DBTest, DBTest2'
+-- 指定数据库名称，多个用逗号隔开
+
+SELECT @DbName	= 'DBTest, DBTest2';
 				
-
 BEGIN
-	--定义数据库名称临时表@temp
+	-- 定义数据库名称临时表@temp
 	DECLARE @temp TABLE
 	(
 		ID INT IDENTITY(1,1),	--自动编号（获知顺序）
 		Result VARCHAR(MAX)		--拆分后结果
-	)
+	);
 	DECLARE @i INT, @SourceSql VARCHAR(max), @target NVARCHAR(MAX), @StrSeprate VARCHAR(10)
     SELECT @SourceSql = LTRIM(RTRIM(@DbName)), @StrSeprate=','	--指定源字符串、分隔符
     IF RIGHT(@SourceSql, LEN(@StrSeprate)) <> @StrSeprate	SET @SourceSql= @SourceSql + @StrSeprate
@@ -57,9 +59,9 @@ BEGIN
 	DECLARE @i_Group INT			--文件组个数
 	DECLARE @Flag VARCHAR(10)		--数据库标识
 
-	IF RTRIM(LTRIM(ISNULL(@Path, ''))) = ''	SET @Path = 'D:\PulicDataBase\'
+	IF RTRIM(LTRIM(ISNULL(@Path, ''))) = ''	SET @Path = 'D:\\PulicDataBase\\'
 	SET @Path = RTRIM(LTRIM(@Path))
-	IF RIGHT(@Path, 1) <> '\'	SET @Path = @Path+'\'
+	IF RIGHT(@Path, 1) <> '\\'	SET @Path = @Path + '\\'
 	SELECT * FROM @temp
 	DECLARE db_cursor CURSOR FOR SELECT Result FROM @temp WHERE ISNULL(Result, '') <> '' ORDER BY ID
 	--开始游标
@@ -68,7 +70,7 @@ BEGIN
 	WHILE @@fetch_status = 0 
 	BEGIN
 		BEGIN TRY		
-			IF CHARINDEX('DBTest', @DataBaseName) > 0 SET @DBPath = @Path + 'DBTest' +'\'	--数据库目录
+			IF CHARINDEX('DBTest', @DataBaseName) > 0 SET @DBPath = @Path + 'DBTest' + '\\'	--数据库目录
 
 			IF EXISTS(SELECT * FROM sysdatabases WHERE name = @DataBaseName) 
 			BEGIN
