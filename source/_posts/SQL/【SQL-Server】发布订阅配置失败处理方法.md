@@ -6,10 +6,12 @@ tags: SQL-Server
 abbrlink: ce23289f
 date: 2018-03-20 18:55:10
 ---
-### 前言
+
 因为业务需求，需要“实时”的同步基础平台的一些信息，公司使用的又是 `SQL Server` ，简单稳定起见，选择使用 **发布订阅** 功能来实现数据的同步。
+<!-- more -->
 
 ### 环境
+
 OS：Windows Server 2008 R2
 
 DB：SQL Server 2008 R2

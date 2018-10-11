@@ -10,7 +10,8 @@ abbrlink: c638d2ec
 date: 2018-02-01 20:13:18
 ---
 ### 记录
-用循环（ `WHILE` ）游标（ `CURSOR` ）实现，遍历系统视图，取出（ `FETCH` ）每条数据并计数+1（这里只是用来记下怎么用，查数量肯定还是用 `COUNT()` 。
+
+用循环（ `WHILE` ）游标（ `CURSOR` ）实现，遍历系统视图，取出（ `FETCH` ）每条数据并计数+1（这里只是用来记下怎么用，查数量肯定还是用 `COUNT()` 。<!-- more -->
 
 ```sql
 CREATE PROCEDURE P_CHECK_DB_NUM

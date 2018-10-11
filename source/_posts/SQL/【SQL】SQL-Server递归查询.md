@@ -9,7 +9,9 @@ abbrlink: 83629cbf
 date: 2018-01-30 19:52:08
 ---
 ### 需求
+
 有一张国内区域表，要查询一个区域及其子区域的区域编码
+<!-- more -->
 
 效果：
 ![区域表查询效果](/assets/images/sql_recursive_query_region/sql_recursive_query_region.png)

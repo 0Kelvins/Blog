@@ -10,11 +10,16 @@ abbrlink: d1379167
 date: 2017-12-12 10:43:07
 ---
 
+记录一下 `SQL Server` 里的锁相关知识
+<!-- more -->
+
 ### 参考
+
 [SQL SERVER的锁机制](https://www.cnblogs.com/chillsrc/archive/2013/04/13/3018386.html)
 [sql server锁知识及锁应用](http://blog.csdn.net/huwei2003/article/details/4047191)
 
 ## 锁类型
+
 | 锁类型 | 说明 | 
 | ------------- |:-------------:|
 | 共享 (S) | 用于不更改或不更新数据的读取操作，如 SELECT 语句。 |
@@ -26,6 +31,7 @@ date: 2017-12-12 10:43:07
 | 键范围 | 当使用可序列化事务隔离级别时保护查询读取的行的范围。 确保再次运行查询时其他事务无法插入符合可序列化事务的查询的行。 |
 
 ## 锁查询
+
 * 查询目前锁的表
 ```sql
 select request_session_id spid, OBJECT_NAME(resource_associated_entity_id) tablename, request_status, request_type, request_mode

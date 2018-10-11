@@ -8,6 +8,11 @@ abbrlink: 8b39915a
 date: 2017-11-02 20:43:13
 ---
 
+MySQL压缩包安装步骤记录
+<!-- more -->
+
+### 步骤
+
 0. 去[官网](https://dev.mysql.com/downloads/mysql/) -> Other Downloads:Windows (x86, 64-bit), ZIP Archive -> 下载mysql社区版压缩包
 
 1. 解压到要安装的目录，如：``D:\Program Files\mysql-8.0.11-winx64``
