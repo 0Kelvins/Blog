@@ -20,51 +20,67 @@ date: 2018-09-12 17:13:53
 CREATE PROCEDURE [dbo].[P_W_QuestionHisRedeposit]
 AS
 BEGIN
-	DECLARE @lastMonth DATETIME, @tableDate NVARCHAR(10), @tableName NVARCHAR(50), @sql NVARCHAR(2000), @error INT;
-	SET @lastMonth = DATEADD(MONTH, -1, GETDATE()); -- 上月同一天
-	SET @tableDate = CONVERT(VARCHAR(10), DATEADD(MONTH, DATEDIFF(MONTH, 0, @lastMonth), 0), 120); -- 上月第一天
-	SET @tableName = '[dbo].[Question_His_' + @tableDate + ']'; -- 历史表名
+	DECLARE @tableMonth DATETIME, @tableDate NVARCHAR(10), @tableName NVARCHAR(50), @sql NVARCHAR(2000), @error INT;
 	SET @error = 0; -- 是否有错
+	DECLARE @monthSpan INT; -- 最早数据的距今的月数
 
-    -- 检查历史表是否已存在，月定时作业执行，应不会重复
-	IF NOT EXISTS(SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(@tableName) AND type IN (N'U'))
+	SELECT @tableMonth = MIN([RecordTime]) FROM [dbo].[Question_His];
+	SET @monthSpan = DATEDIFF(MONTH, @tableMonth, GETDATE());
+
+	DECLARE @i INT, @ErrMsg nvarchar(4000), @ErrSeverity int;
+	SET @i = 1;
+	WHILE @i <= @monthSpan	-- 遍历转存每月历史数据
 	BEGIN
-		BEGIN TRY
-			BEGIN TRANSACTION
-                -- 建表
-				SET @sql = 'CREATE TABLE ' + @tableName + ' (
-					[Id] [INT],
-					[QuestionID] [VARCHAR](500),
-					[Answers] [VARCHAR](MAX),
-					[Result] [FLOAT],
-					[UserID] [VARCHAR](100),
-					[RecordTime] [DATETIME]
-				)';
-				EXECUTE(@sql);
-				SET @error = @error + @@ERROR;
+		SET @tableMonth = DATEADD(MONTH, -@i, GETDATE());
+		SET @tableDate = CONVERT(VARCHAR(10), DATEADD(MONTH, DATEDIFF(MONTH, 0, @tableMonth), 0), 120);
+		SET @tableName = '[dbo].[Question_His_' + @tableDate + ']'; -- 历史表名
 
-                -- 转存前一个月的历史数据
-				SET @sql = 'INSERT INTO '+ @tableName +' SELECT * FROM [dbo].[Question_His]'
-						 + ' WHERE DATEDIFF(MONTH, [RecordTime], GETDATE()) >= 1';
-				EXECUTE(@sql);
-				SET @error = @error + @@ERROR;
+		IF NOT EXISTS (SELECT 1 FROM [dbo].[Question_His] WHERE DATEDIFF(MONTH, [RecordTime], GETDATE()) = @i)
+		BEGIN
+			SET @i = @i + 1;
+			CONTINUE;
+		END
 
-                -- 删除历史表一个月前数据
-				SET @sql = 'DELETE FROM [dbo].[Question_His] WHERE DATEDIFF(MONTH, [RecordTime], GETDATE()) >= 1';
-				EXECUTE(@sql);
-				SET @error = @error + @@ERROR;
-			COMMIT
-		END TRY
-		BEGIN CATCH
-			IF @@TRANCOUNT > 0 -- 失败回滚
-				ROLLBACK
+		-- 检查历史表是否已存在，月定时作业执行，应不会重复
+		IF NOT EXISTS(SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(@tableName) AND type IN (N'U'))
+		BEGIN
+			BEGIN TRY
+				BEGIN TRANSACTION
+					-- 建表
+					SET @sql = 'CREATE TABLE ' + @tableName + ' (
+						[Id] [INT],
+						[QuestionID] [VARCHAR](500),
+						[Answers] [VARCHAR](MAX),
+						[Result] [FLOAT],
+						[UserID] [VARCHAR](100),
+						[RecordTime] [DATETIME]
+					)';
+					EXECUTE(@sql);
+					SET @error = @error + @@ERROR;
 
-			DECLARE @ErrMsg NVARCHAR(4000), @ErrSeverity INT
-			SELECT @ErrMsg = ERROR_MESSAGE(),
-				   @ErrSeverity = ERROR_SEVERITY()
+					-- 转存该月的历史数据
+					SET @sql = 'INSERT INTO '+ @tableName +' SELECT * FROM [dbo].[Question_His]'
+							+ ' WHERE DATEDIFF(MONTH, [RecordTime], GETDATE()) = '+ CAST(@i AS NVARCHAR(10));
+					EXECUTE(@sql);
+					SET @error = @error + @@ERROR;
 
-			RAISERROR(@ErrMsg, @ErrSeverity, 1)
-		END CATCH
+					-- 删除历史表该月数据
+					SET @sql = 'DELETE FROM [dbo].[Question_His] WHERE DATEDIFF(MONTH, [RecordTime], GETDATE()) = '+ CAST(@i AS NVARCHAR(10));
+					EXECUTE(@sql);
+					SET @error = @error + @@ERROR;
+				COMMIT
+			END TRY
+			BEGIN CATCH
+				IF @@TRANCOUNT > 0 -- 失败回滚
+					ROLLBACK
+
+				SELECT @ErrMsg = ERROR_MESSAGE(),
+					@ErrSeverity = ERROR_SEVERITY()
+
+				RAISERROR(@ErrMsg, @ErrSeverity, 1)
+			END CATCH
+		END
+		SET @i = @i + 1;
 	END
 END
 ```
