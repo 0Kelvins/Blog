@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 0Kelvins的个人博客
+title: 0Kelvins
 subtitle: ''
 description: ''
 keywords:
@@ -109,12 +109,10 @@ deploy:
   repo: git@github.com:0Kelvins/0Kelvins.github.io.git
   branch: master
 
-# �Զ���վ����������
-# ��Ҫ�Ȱ�װ�����
+# 全局搜索
 # npm install hexo-generator-search --save
 search:
   path: search.xml
-  # ��ֻ���������£�������Ϊpost
   field: all
   format: html
   limit: 10000
@@ -139,6 +137,6 @@ jsonContent:
     categories: false
     tags: true
 
-# �Զ�����sitemap
+# 生成sitemap
 #sitemap: 
 #  path: sitemap.xml
