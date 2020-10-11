@@ -12,6 +12,7 @@ categories:
 
 ## 问题
 使用conda创建的虚拟环境，使用pycharm在该环境下启动jupyter无法检测到GPU
+<!-- more -->
 
 ## 解决办法
 添加虚拟环境到jupyter的kernel
